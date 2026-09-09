@@ -1,4 +1,4 @@
-package com.neon.connectneon.Controller;
+package com.neon.connectneon.controller;
 
 import java.util.List;
 

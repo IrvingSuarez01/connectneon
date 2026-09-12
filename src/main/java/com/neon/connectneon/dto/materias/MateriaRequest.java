@@ -5,7 +5,7 @@ public class MateriaRequest {
     //Nombre que recibimos
 
     private String nombre;
-    private String creditos_necesarios;
+    private int creditos_necesarios;
 
     public MateriaRequest(){
 
@@ -19,11 +19,11 @@ public class MateriaRequest {
         this.nombre = nombre;
     }
 
-    public String getCreditosNecesarios() {
+    public int getCreditosNecesarios() {
         return creditos_necesarios;
     }
 
-    public void setCreditosNecesarios(String creditos_necesarios) {
+    public void setCreditosNecesarios(int creditos_necesarios) {
         this.creditos_necesarios = creditos_necesarios;
     }
 }

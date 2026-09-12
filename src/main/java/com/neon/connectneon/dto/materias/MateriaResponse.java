@@ -3,11 +3,11 @@ package com.neon.connectneon.dto.materias;
 public class MateriaResponse {
     private Long id;
     private String nombre;
-    private String creditos_necesarios;
+    private int creditos_necesarios;
 
  
 
-    public MateriaResponse(Long id, String nombre, String creditos_necesarios) {
+    public MateriaResponse(Long id, String nombre, int creditos_necesarios) {
         this.id = id;   
         this.nombre=nombre;
         this.creditos_necesarios = creditos_necesarios;
@@ -29,11 +29,11 @@ public class MateriaResponse {
         this.nombre = nombre;
     }
 
-    public String getCreditosNecesarios() {
+    public int getCreditosNecesarios() {
         return creditos_necesarios;
     }
 
-    public void setCreditosNecesarios(String creditos_necesarios) {
+    public void setCreditosNecesarios(int creditos_necesarios) {
         this.creditos_necesarios = creditos_necesarios;
     }
 }

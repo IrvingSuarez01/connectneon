@@ -3,8 +3,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.neon.connectneon.dto.UsuarioRequest;
-import com.neon.connectneon.dto.UsuarioResponse;
+import com.neon.connectneon.dto.usuario.*;
 import com.neon.connectneon.model.Usuario;
 import com.neon.connectneon.repository.UsuarioRepository;
 

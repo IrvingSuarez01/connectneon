@@ -1,4 +1,4 @@
-package com.neon.connectneon.dto;
+package com.neon.connectneon.dto.usuario;
 
 public class UsuarioRequest {
     

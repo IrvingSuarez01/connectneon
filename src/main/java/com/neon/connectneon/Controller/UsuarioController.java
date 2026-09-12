@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.neon.connectneon.dto.UsuarioRequest;
-import com.neon.connectneon.dto.UsuarioResponse;
+import com.neon.connectneon.dto.usuario.UsuarioRequest;
+import com.neon.connectneon.dto.usuario.UsuarioResponse;
 import com.neon.connectneon.service.UsuarioService;
 
 @RestController

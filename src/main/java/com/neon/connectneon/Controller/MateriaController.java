@@ -28,7 +28,7 @@ public class MateriaController {
     public MateriaController(MateriaService materiaservice) { this.materiaservice = materiaservice; }
 
   
-    //http://localhost:8080/api/usuarios
+    //http://localhost:8080/api/materias
    @PostMapping
     public ResponseEntity<MateriaResponse> crear(@RequestBody MateriaRequest request){
        MateriaResponse materiaCreado= materiaservice.crear(request);

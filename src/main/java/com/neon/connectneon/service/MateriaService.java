@@ -39,6 +39,12 @@ public class MateriaService {
     }
 
 
+    public List<MateriaResponse> buscarNombre(String nombreMateria){
+        //return  materiaRepository.findByNombreContaining(nombreMateria).map(this::convertirAResponse).orElse(null);        
+        return materiaRepository.findByNombreContaining(nombreMateria).stream().map(this::convertirAResponse).toList();
+    }
+
+
 
     public MateriaResponse actualizar(Long id, MateriaRequest request){
 

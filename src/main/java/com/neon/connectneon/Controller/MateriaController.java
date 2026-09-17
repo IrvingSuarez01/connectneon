@@ -56,6 +56,19 @@ public class MateriaController {
    }
 
 
+     @GetMapping("/buquedaNombre/{nombreMateria}")
+    public ResponseEntity<List<MateriaResponse>> buscarPorNombre(@PathVariable String nombreMateria){
+
+       List<MateriaResponse> materia= materiaservice.buscarNombre(nombreMateria);
+       if(materia == null){
+           return  ResponseEntity.notFound().build();
+       }
+       return ResponseEntity.ok(materia);
+   }
+
+   
+
+
     @PutMapping("/{id}")
     public ResponseEntity<MateriaResponse> actuzalizar(@PathVariable Long id,@RequestBody MateriaRequest request)
     {

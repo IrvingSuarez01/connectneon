@@ -2,11 +2,13 @@ package com.neon.connectneon.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Sort;
 
 import com.neon.connectneon.dto.materias.MateriaRequest;
 import com.neon.connectneon.dto.materias.MateriaResponse;
 import com.neon.connectneon.model.Materia;
 import com.neon.connectneon.repository.MateriaRepository;
+
 
 @Service
 public class MateriaService {
@@ -28,8 +30,10 @@ public class MateriaService {
 
     }
 
+     public static final String ID = "id";
     public List<MateriaResponse> listar(){
-        return  materiaRepository.findAll().stream().map(this::convertirAResponse).toList();
+       
+        return  materiaRepository.findAll(Sort.by(Sort.Direction.ASC, ID)).stream().map(this::convertirAResponse).toList();
 
     }
 
@@ -41,7 +45,8 @@ public class MateriaService {
 
     public List<MateriaResponse> buscarNombre(String nombreMateria){
         //return  materiaRepository.findByNombreContaining(nombreMateria).map(this::convertirAResponse).orElse(null);        
-        return materiaRepository.findByNombreContaining(nombreMateria).stream().map(this::convertirAResponse).toList();
+        System.out.println("Buscando: " + nombreMateria);
+        return materiaRepository.findByNombreContainingIgnoreCase(nombreMateria).stream().map(this::convertirAResponse).toList();
     }
 
 

@@ -8,5 +8,5 @@ import com.neon.connectneon.model.Materia;
 
 public interface MateriaRepository extends  JpaRepository<Materia, Long>   {
     
-    List<Materia> findByNombreContaining(String nombre);
+    List<Materia> findByNombreContainingIgnoreCase(String nombre);
 }
